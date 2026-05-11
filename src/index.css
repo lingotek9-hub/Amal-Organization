@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700;800&family=IBM+Plex+Arabic:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-cairo: "Cairo", sans-serif;
+  --font-tajawal: "Tajawal", sans-serif;
+  --font-ibm: "IBM Plex Arabic", sans-serif;
+  
+  --color-primary-deep: #0A2647;
+  --color-primary-light: #144272;
+  --color-accent-green: #205295;
+  --color-soft-green: #E1FFBB;
+  --color-luxury-gold: #D4AF37;
+  --color-soft-gray: #F8F9FA;
+}
+
+body {
+  font-family: var(--font-cairo);
+  background-color: var(--color-soft-gray);
+  color: var(--color-primary-deep);
+  direction: rtl;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-dark {
+  background: rgba(10, 38, 71, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@layer utilities {
+  .text-luxury {
+    background: linear-gradient(to right, #D4AF37, #F9D976, #D4AF37);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
